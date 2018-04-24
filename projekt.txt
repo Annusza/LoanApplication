@@ -1,0 +1,17 @@
+index.jsp
+
+parameters.jsp - numer wniosku i data w beanie loan.number=numer i loan.date=data
+
+AfterPArameters: $get amount installmentCount
+
+person.jsp - kwota kredytu i i loœæ rat w beanie parameters.amount=kwota parameters.installmentCount=raty
+
+AfterPersonFilter: $get firstName, surname, pesel
+
+address.jsp. - imiê, nazwisko i pesel w beanie person, loan.number, parameters.amount
+
+AfterAddressFilter: $get city, zipCode, street, houseNumber, localNumber, phoneNumber;
+
+success.jsp - loan, address, person, parameters
+
+AfterSuccessFilter: 
